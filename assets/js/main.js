@@ -14,7 +14,7 @@ $.ajax({
       var day = "2018-01-" + i;
       var month = moment(num_gg).format("MMMM");
       if (cont < data.response.length && (moment(data.response[cont].date).day() == i)) {
-        $(".list").append("<li date='" + day + "'" + "class='red'>" + i + " " + month);
+        $(".list").append("<li date='" + day + "'" + "class='red'>" + i + " " + month + " - " + data.response[cont].name);
         cont++;
       } else{
         $(".list").append("<li date='" + day + "'>" + i + " " + month)
